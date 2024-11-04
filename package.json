@@ -1,0 +1,28 @@
+{
+    "name": "minefort",
+    "version": "0.1.0",
+    "description": "",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "repository": "git@github.com:tarna/minefort",
+    "bugs": "https://github.com/tarna/minefort/issues",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "prepublish": "tsc",
+        "example": "ts-node src/example.ts"
+    },
+    "keywords": [
+        "minecraft",
+        "minefort",
+        "servers",
+        "blogs"
+    ],
+    "author": "Tarna",
+    "license": "MIT",
+    "devDependencies": {
+        "ts-node": "^10.9.2",
+        "typescript": "^5.6.3"
+    }
+}

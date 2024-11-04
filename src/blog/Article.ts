@@ -1,0 +1,87 @@
+import { Minefort } from '../Minefort';
+import { ArticleAuthor, AuthorTag, Article as IArticle } from './BlogResponse';
+
+export class Article {
+    client: Minefort;
+
+    id: string;
+    uuid: string;
+    title: string;
+    slug: string;
+    html: string;
+    commentId: string;
+    featureImage: string;
+    featured: boolean;
+    visibility: boolean;
+    createdAt: Date;
+    updatedAt: Date;
+    publishedAt: Date;
+    customExcerpt: string;
+    codeinjectionHead: string;
+    codeinjectionFoot: string;
+    customTemplate: string;
+    canonicalUrl: string;
+    authors: ArticleAuthor[];
+    tags: AuthorTag[];
+    primaryAuthor: ArticleAuthor;
+    primaryTag: AuthorTag;
+    url: string;
+    excerpt: string;
+    readingTime: number;
+    access: boolean;
+    comments: boolean;
+    ogImage: string | null;
+    ogTitle: string | null;
+    ogDescription: string | null;
+    twitterImage: string | null;
+    twitterTitle: string | null;
+    twitterDescription: string | null;
+    metaTitle: string;
+    metaDescription: string;
+    emailSubject: string | null;
+    frontmatter: string | null;
+    featureImageAlt: string | null;
+    featureImageCaption: string | null;
+    constructor(client: Minefort, blog: IArticle) {
+        this.client = client;
+        
+        this.id = blog.id;
+        this.uuid = blog.uuid;
+        this.title = blog.title;
+        this.slug = blog.slug;
+        this.html = blog.html;
+        this.commentId = blog.comment_id;
+        this.featureImage = blog.feature_image;
+        this.featured = blog.featured;
+        this.visibility = blog.visibility;
+        this.createdAt = new Date(blog.created_at);
+        this.updatedAt = new Date(blog.updated_at);
+        this.publishedAt = new Date(blog.published_at);
+        this.customExcerpt = blog.custom_excerpt;
+        this.codeinjectionHead = blog.codeinjection_head;
+        this.codeinjectionFoot = blog.codeinjection_foot;
+        this.customTemplate = blog.custom_template;
+        this.canonicalUrl = blog.canonical_url;
+        this.authors = blog.authors;
+        this.tags = blog.tags;
+        this.primaryAuthor = blog.primary_author;
+        this.primaryTag = blog.primary_tag;
+        this.url = blog.url;
+        this.excerpt = blog.excerpt;
+        this.readingTime = blog.reading_time;
+        this.access = blog.access;
+        this.comments = blog.comments;
+        this.ogImage = blog.og_image;
+        this.ogTitle = blog.og_title;
+        this.ogDescription = blog.og_description;
+        this.twitterImage = blog.twitter_image;
+        this.twitterTitle = blog.twitter_title;
+        this.twitterDescription = blog.twitter_description;
+        this.metaTitle = blog.meta_title;
+        this.metaDescription = blog.meta_description;
+        this.emailSubject = blog.email_subject;
+        this.frontmatter = blog.frontmatter;
+        this.featureImageAlt = blog.feature_image_alt;
+        this.featureImageCaption = blog.feature_image_caption;
+    }
+}
