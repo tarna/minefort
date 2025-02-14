@@ -45,6 +45,7 @@ export class Article {
     constructor(client: Minefort, blog: IArticle) {
         this.client = client;
         
+        console.log(blog.id);
         this.id = blog.id;
         this.uuid = blog.uuid;
         this.title = blog.title;

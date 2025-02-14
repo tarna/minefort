@@ -1,5 +1,10 @@
 export interface BlogResponse {
     status: 'OK';
+    result: Article;
+}
+
+export interface BlogListResponse {
+    status: 'OK';
     result: Article[];
 }
 

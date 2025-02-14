@@ -9,4 +9,7 @@ import { Minefort } from './Minefort';
 
     const articles = await minefort.blog.getArticles();
     console.log(articles.reduce((acc, article) => acc + article.readingTime, 0));
+
+    const article = await minefort.blog.getArticle(articles[0].slug);
+    console.log(article.title);
 })();
